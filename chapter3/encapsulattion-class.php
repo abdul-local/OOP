@@ -30,6 +30,21 @@ class User {
     }
 
 }
+// membuat class baru dengan nama produk
+class Produk{
+    private $name;
+    // buat method untuk menambahkan nilainya
+    public function setname($nilai){
+        return $this->name=$nilai;
+    }
+    // buat method untuk menampilkan namanya
+    public function getname(){
+        return $this->name;
+    }
+}
+
+
+
 // membuat subclass dengan printah extends
 // class Constumer mewarisi sifat class User yang di sebut dengan Inheritance
 class Constumer extends User{
@@ -67,6 +82,12 @@ echo $c->fullname()."<br>";
 // cetak nilai Method sayParent
 echo $c->sayParent()."<br>";
 echo $c->sayme()."<br>";
+// nah sekarang kita mau coba akses untuk class produk;
+$produk = new Produk;
+//tulis nilainya
+$produk->setname("PHP");
+// tampilkan name di private itu
+echo $produk->getname();
 
 
 
