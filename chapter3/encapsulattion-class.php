@@ -43,7 +43,18 @@ class Produk{
     }
 }
 
+// membuta kelas baru dengan memperaktikan Static Property dan Static Method
+class Siswa{
+    // property statict 
+    public static $sekolah=['SD','SMP','SMA'];
+    private static $jumlah=0;
+    // methode statict
+    public static function jumlahsiswa(){
+        return self::$jumlah;
+    }
 
+
+}
 
 // membuat subclass dengan printah extends
 // class Constumer mewarisi sifat class User yang di sebut dengan Inheritance
@@ -87,8 +98,14 @@ $produk = new Produk;
 //tulis nilainya
 $produk->setname("PHP");
 // tampilkan name di private itu
-echo $produk->getname();
+echo $produk->getname()."<br>";
 
+
+// nah sekarang ya mau coba untuk tampilkan semuanya isi di class siswa itu
+echo Siswa::$sekolah[0]."<br>";
+// memanggil method jumlah siswa 
+
+echo Siswa::jumlahsiswa();
 
 
 ?>
